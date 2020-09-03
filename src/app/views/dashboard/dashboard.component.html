@@ -1,0 +1,33 @@
+<div class="dashboard-container">
+    <div *ngIf="apps.installed.length === 0" class="center" id="no-apps">
+        <span class="small-font">You haven't added anything to get your dashboard yet</span>
+        <span class="normal-font">Click to discover apps, research, survey & data widgets to get the most out of the
+            Gateway</span>
+        <button [routerLink]="['/discover']">DISCOVER</button>
+    </div>
+
+    <div *ngIf="apps.installed.length > 0" class="center">
+        <div class="search-input">
+            <input placeholder="Search App">
+        </div>
+    </div>
+
+    <div *ngIf="apps.installed.length > 0" class="installed-apps">
+        <div class="app-card" *ngFor="let app of apps.installed; let i = index">
+            <div class="center">
+                <mat-icon>blur_on</mat-icon>
+            </div>
+            <div class="center">
+                <div class="app-card-title">{{app.name}}</div>
+            </div>
+            <div class="center">
+                <div class="app-card-title">
+                    <span>{{app.description}}</span></div>
+            </div>
+            <div class="center">
+                <span class="more" (click)="openApp(app)">More..</span>
+
+            </div>
+        </div>
+    </div>
+</div>

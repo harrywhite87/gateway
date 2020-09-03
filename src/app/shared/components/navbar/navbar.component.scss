@@ -1,0 +1,63 @@
+@import "../../../../styles-variables.scss";
+
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+header,
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: $background-color-secondary;
+    color: white;
+}
+
+header {
+    padding: 8px 16px;
+}
+
+nav {
+    padding: 8px 16px 0 0;
+
+}
+
+.flex-spacer {
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+}
+
+.mat-icon {
+    color: white;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+@for $i from 1 through length($palette) {
+    a:nth-child(#{length($palette)}n+#{$i}) {
+        border-top: 2px solid nth($palette, $i);
+    }
+}
+
+a {
+    padding: 16px 22px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    color: $grey-4;
+
+    &.active {
+        background: $background-color;
+    }
+
+    &:not(.active) {
+        border-top: 2px solid $background-color-secondary;
+
+    }
+
+    &:hover {
+        background: $background-color;
+    }
+}

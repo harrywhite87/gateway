@@ -1,0 +1,16 @@
+<button class="back-button" [routerLink]="['/discover']">back</button>
+<h1 class="bold padding-24">Recommended Resources</h1>
+<div class="grey-3-font">
+    We have identified 3 resources to help with your question:
+    <span>'Which segments have the highest propensity to purchase your brand.'</span>
+</div>
+<h1 class="center padding-64 grey-3-font light">Pin the resources to your dashboard and start using them right away</h1>
+<!-- {{recommended.length}} -->
+<div class="recommended-card" *ngFor="let recomendation of recommended; let i = index;">
+    <div class="card-title">{{recomendation.name}}</div>
+    <mat-icon>blur_on</mat-icon>
+    <span>{{recomendation.description}}</span>
+    <div class="video"></div>
+    <div><button (click)="pinApp(recomendation)" class=" right">PIN TO MY DASHBOARD</button></div>
+
+</div>

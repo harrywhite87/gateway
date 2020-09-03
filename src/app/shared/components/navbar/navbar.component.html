@@ -1,0 +1,22 @@
+<header>
+    <img class="platform-logo" src="assets/images/gateway-logo.png">
+    <div class="flex-spacer">
+        <img class="client-logo" src="assets/images/visa-logo.png">
+    </div>
+    <mat-icon class="material-icons-outlined">wb_sunny</mat-icon>
+    <mat-icon class="material-icons-outlined">brightness_2</mat-icon>
+    <mat-icon class="material-icons-outlined">help</mat-icon>
+    <mat-icon class="material-icons-outlined">settings</mat-icon>
+    <mat-icon class="material-icons-outlined">person</mat-icon>
+</header>
+<nav>
+    <a [routerLink]="['/dashboard', 'all']" routerLinkActive="active">All</a>
+    <a [routerLink]="['/category', 'decision']" routerLinkActive="active">Decision Support</a>
+    <a [routerLink]="['/category', 'planning']" routerLinkActive="active">Planning</a>
+    <a [routerLink]="['/category', 'activation']" routerLinkActive="active">Activation</a>
+    <a [routerLink]="['/category', 'measurement']" routerLinkActive="active">Measurement & Reporting</a>
+
+    <div class="flex-spacer"> </div>
+    <button [routerLink]="['/discover']">DISCOVER</button>
+    <!-- <button [routerLink]="['/discover']">Discover</button> -->
+</nav>

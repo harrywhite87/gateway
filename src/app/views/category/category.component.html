@@ -1,0 +1,17 @@
+<div class="category-container" [class]="'grid-'+category.subCategories.length">
+    <div *ngFor="let subCategory of category.subCategories; let i = index">
+        <span class="large-font" [ngStyle]="{'border-bottom': '1px solid '+category.color}">{{subCategory.name}}</span>
+
+        <ng-container *ngFor="let app of apps.available; let i = index;">
+            <div class="recommended-card" *ngIf="app.category===subCategory.name">
+                <div class="card-title">{{app.name}}</div>
+                <mat-icon>blur_on</mat-icon>
+                <span>{{app.description}}</span>
+                <div class="video"></div>
+                <!-- <div><button class=" right">PIN TO MY DASHBOARD</button></div> -->
+                <div><button (click)="pinApp(app)" class=" right">PIN TO MY DASHBOARD</button></div>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

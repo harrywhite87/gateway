@@ -1,0 +1,28 @@
+<div class="app-information-container" *ngIf="app">
+    <h2 *ngIf="!edit">{{app.name}}</h2>
+    <h2 *ngIf="edit">Name: <br><textarea [(ngModel)]="app.name"></textarea></h2>
+    <mat-icon>blur_on</mat-icon>
+    <!-- <img class="app-information-thumbnail" src="assets/img_placeholder.svg"> -->
+    <ng-container *ngIf="!edit">
+        <div>What it Does: <br>{{app.description}}</div>
+        <div>How it Helps: <br>{{app.how}}</div>
+        <div>Proprietary?: <br>{{app.proprietary}}</div>
+        <div>Resource Required: <br>{{app.resource}}</div>
+        <div>Inputs Required: <br>{{app.inputs}}</div>
+        <div>Budget Requirement: <br>{{app.access}}</div>
+        <div>PM Contact Point: <br>{{app.contact}}</div>
+        <button><a [href]="app.link">OPEN</a></button>
+    </ng-container>
+    <ng-container *ngIf="edit">
+        <div class="edit-field">What it Does: <br><textarea [(ngModel)]="app.description"></textarea></div>
+        <div class="edit-field">How it Helps: <br><textarea [(ngModel)]="app.how"></textarea></div>
+        <div class="edit-field">Proprietary?: <br><textarea [(ngModel)]="app.proprietary"></textarea></div>
+        <div class="edit-field">Resource Required: <br><textarea [(ngModel)]="app.resource"></textarea></div>
+        <div class="edit-field">Inputs Required: <br><textarea [(ngModel)]="app.inputs"></textarea></div>
+        <div class="edit-field">Budget Requirement: <br><textarea [(ngModel)]="app.access"></textarea></div>
+        <div class="edit-field">PM Contact Point: <br><textarea [(ngModel)]="app.contact"></textarea></div>
+        <div class="edit-field">URL: <br><textarea [(ngModel)]="app.link"></textarea></div>
+        <!-- <button><a [[routerLink]="['/dashboard']" routerLinkActive="router-link-active">SAVE</a></button> -->
+
+    </ng-container>
+</div>

@@ -1,0 +1,75 @@
+.dashboard-container {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+
+
+
+.installed-apps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-rows: 30px 30px 30px; 
+    column-gap: 16px;
+    row-gap: 16px;
+    padding: 16px;
+}
+
+.app-card {
+    width: 233px;
+    height: 259px;
+    border: 1px solid #707070;
+    border-radius: 35px;
+    opacity: 1;
+
+    &>div {
+        margin-top: 26px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 2rem;
+        white-space: nowrap;
+    }
+}
+
+
+
+.mat-icon {
+    font-size: 44px;
+    width: 44px;
+    height: 44px;
+
+}
+
+#no-apps {
+    width: 682px;
+    height: 418px;
+    border: 1px solid #707070;
+    border-radius: 35px;
+    /* opacity: 1; */
+    margin-top: 32px;
+
+    span.small-font {
+        width: 100%;
+        display: inline-block;
+        margin-top: 96px;
+        color: #7a7883;
+    }
+
+    span.normal-font {
+        width: 100%;
+        padding: 0 80px;
+        display: inline-block;
+        margin-top: 57px;
+    }
+
+    button {
+        margin-top: 40px;
+    }
+
+}
+
+.more {
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.app-information-container {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: auto auto;
+    // grid-template-rows: 30px 30px 30px; 
+    column-gap: 16px;
+    row-gap: 16px;
+
+    div {
+        font-size: 16px
+    }
+}
+
+mat-icon {
+    grid-row: span 7;
+    font-size: 180px;
+    width: 180px;
+    height: 180px;
+}
+
+textarea {
+    width: 100%;
+}
+
+.edit-field {
+    grid-column-start: 1;
+}
